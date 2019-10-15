@@ -4,12 +4,14 @@ interface Color {
     color?: string,
 }
 
-interface Props {
+interface Propss {
     onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
     value: string
 }
 
-export const Ex3:React.FC<Props>= (props) => {
+
+
+export const Ex3:React.FC<Propss>= (props) => {
     const [count, setCount] = React.useState<number | null>(8);
     //the same with objects 
     const [color, setColor] = React.useState<Color>({color: "red"});
@@ -25,3 +27,5 @@ export const Ex3:React.FC<Props>= (props) => {
 
     )
 }
+
+type MyComponentProps = React.ComponentProps<typeof Ex3>;
